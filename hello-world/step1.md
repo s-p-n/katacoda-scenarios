@@ -55,18 +55,18 @@ bar.forEach(#(val) {
 <pre class="file" data-filename="project/program.ari" data-target="replace">
 let someVariable = "I'm some variable";
 let someSwitch = true;
-let myComponent = <someTag with="attributes">
+let myComponent = &lt;someTag with="attributes"&gt;
     "I am some inner text.";
-    <nestedTag>
+    &lt;nestedTag&gt;
         "This is a nested string in a nested tag.";
         someVariable;
         if (someSwitch) {
-            return <switch on=true />;
+            return &lt;switch on=true /&gt;;
         } else {
-            return <switch on=false />;
+            return &lt;switch on=false /&gt;;
         };
-    </nestedTag>;
-</someTag>;
+    &lt;/nestedTag&gt;;
+&lt;/someTag&gt;;
 console.log(myComponent.nestedTag.switch.on); 
 </pre>
 `arini program.ari`{{execute}}
@@ -80,9 +80,6 @@ let Guy {
 	};
 };
 let someObj = Guy();
-/*
-someObj becomes an array with the method: sayHi(name)
-*/
 let GuysFriend {
 	use Guy;
 	public tellSecret() {
@@ -90,7 +87,7 @@ let GuysFriend {
 	};
 };
 let friend = GuysFriend();
-friend.tellSecret(); // "It's a foo!"
+friend.tellSecret();
 </pre>
 `arini program.ari`{{execute}}
 
