@@ -16,12 +16,12 @@ let foo = "I am a string.";
 let bar = 'I am
     a multiline
     string';
-let baz = `
+let baz = \`
   I am a multiline string containing 2 variables:
   foo: ${foo}
   bar: ${bar}
   And that is that.
-`;
+\`;
 console.log(baz);
 </pre>
 `arini program.ari`{{execute}}
