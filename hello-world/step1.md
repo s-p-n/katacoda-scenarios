@@ -58,13 +58,13 @@ let someSwitch = true;
 let myComponent = &#x3C;someTag with=&#x22;attributes&#x22;&#x3E;
     &#x22;I am some inner text.&#x22;;
     &#x3C;nestedTag&#x3E;
-        &#x22;This is a nested string in a nested tag.&#x22;;
-        someVariable;
-        if (someSwitch) {
-            return &#x3C;switch on=true /&#x3E;;
-        } else {
-            return &#x3C;switch on=false /&#x3E;;
-        };
+    &#x22;This is a nested string in a nested tag.&#x22;;
+    someVariable;
+    if (someSwitch) {
+    return &#x3C;switch on=true /&#x3E;;
+    } else {
+    return &#x3C;switch on=false /&#x3E;;
+    };
     &#x3C;/nestedTag&#x3E;;
 &#x3C;/someTag&#x3E;;
 console.log(myComponent.nestedTag.switch.on); 
