@@ -10,7 +10,7 @@ console.log(foo, bar);
 </pre>
 `arini program.ari`{{execute}}
 
-* A **string** can be text surrounded by `""`, or `''`, or ``.
+* A **string** can be text surrounded by `""`, or `''`, or backticks.
 <pre class="file" data-filename="project/program.ari" data-target="replace">
 let foo = "I am a string.";
 let bar = 'I am
