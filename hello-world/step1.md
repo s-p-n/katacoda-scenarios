@@ -2,6 +2,6 @@ This is your first step.
 
 ## Task
 
-This is an _example_ of creating a scenario and running a **command**
+This is how to install Arini with npm:
 
-`echo 'Hello World'`{{execute}}
+`npm i arini`{{execute}}
