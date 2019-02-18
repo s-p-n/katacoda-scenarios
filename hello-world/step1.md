@@ -17,7 +17,15 @@ Follow the directions from npm to initialize your Node.JS prackage.
 #### Once that's done, create an arini program:
 `touch program.ari`{{execute}}
 
+Now, in your editor, open the `project` directory, and open up `program.ari`
 
+
+Once opened, you can copy this code:
 <pre class="file" data-filename="project/program.ari" data-target="replace">
   console.log("Sup?");
 </pre>
+
+#### Run the arini program:
+`arini program.ari`{{execute}}
+
+That's it!
