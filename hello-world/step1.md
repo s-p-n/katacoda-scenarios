@@ -10,7 +10,7 @@ How to create an Arini Project on Ubuntu with npm.
 
 ### Once you're in there, run npm init and install arini
 
-`npm init && npm i --save -g arini`{{execute}}
+`npm init && npm i --save -g arini && npm i --save arini`{{execute}}
 
 Follow the directions from npm to initialize your Node.JS prackage.
 
