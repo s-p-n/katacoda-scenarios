@@ -1,11 +1,13 @@
-This is your first step.
+Creating an Arini Project
 
-## Task
+## First, make a directory for your project.
 
-This is how to install Arini with npm:
+`mkdir project`{{execute}}
 
-`apt update`{{execute}}
+## Now, enter that directory
 
-`apt install npm`{{execute}}
+`cd project`{{execute}}
 
-`npm i arini`{{execute}}
+## Once you're in there, run npm init and install arini
+
+`npm init && npm i --save arini`{{execute}}
