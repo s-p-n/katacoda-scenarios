@@ -5,7 +5,10 @@
   "time": "2 minutes",
   "details": {
     "steps": [{
-      "title": "Step 1 - Run Command",
+      "title": "Step 0 - Setup Arini Project",
+      "text": "step0.md"
+    }, {
+      "title": "Step 1 - Get a Feel for Arini",
       "text": "step1.md"
     }],
     "intro": {
