@@ -53,20 +53,20 @@ bar.forEach(#(val) {
 
 * A **tag** is basically an XML tag- kinda like HTML. A Tag has a name and may contain attributes or children. Unlike XML/HTML, Tag children in Arini can be of any type or expression. Because of the first-class nature of Tag children, **each child of a Tag must be followed by a semi-colon**- just like everywhere else in the language. 
 <pre class="file" data-filename="project/program.ari" data-target="replace">
-let someVariable = "I'm some variable";
+let someVariable = &#x22;I&#x27;m some variable&#x22;;
 let someSwitch = true;
-let myComponent = &lt;someTag with="attributes"&gt;
-    "I am some inner text.";
-    &lt;nestedTag&gt;
-        "This is a nested string in a nested tag.";
+let myComponent = &#x3C;someTag with=&#x22;attributes&#x22;&#x3E;
+    &#x22;I am some inner text.&#x22;;
+    &#x3C;nestedTag&#x3E;
+        &#x22;This is a nested string in a nested tag.&#x22;;
         someVariable;
         if (someSwitch) {
-            return &lt;switch on=true /&gt;;
+            return &#x3C;switch on=true /&#x3E;;
         } else {
-            return &lt;switch on=false /&gt;;
+            return &#x3C;switch on=false /&#x3E;;
         };
-    &lt;/nestedTag&gt;;
-&lt;/someTag&gt;;
+    &#x3C;/nestedTag&#x3E;;
+&#x3C;/someTag&#x3E;;
 console.log(myComponent.nestedTag.switch.on); 
 </pre>
 `arini program.ari`{{execute}}
