@@ -76,17 +76,17 @@ console.log(&#x22;&#x22; + myComponent.nestedTag.switch);
 * A **scope** is kind of like a function from other languages, but has support for `public` and `protected` properties. If nothing is returned, a scope does not return `void` when invoked, it instead **returns the public properties available.** When extended, the public and protected properties are made available to the scope that extends it. `private` can be thought of as a synonym for `let`, but there are subtle differences. In essence, `private` and `let` are stored exactly the same way, just in slightly different places. They both work anywhere in the language exactly the same way- so I suggest to pick one and stick with it.
 <pre class="file" data-filename="project/program.ari" data-target="replace">
 let Guy {
-    protected shared_secret = "it's a foo!";
-    public sayHi (name = "no name") {
-        return "Hello, " + name;
-    };
+ protected shared_secret = &#x22;it&#x27;s a foo!&#x22;;
+ public sayHi (name = &#x22;no name&#x22;) {
+   return &#x22;Hello, &#x22; + name;
+ };
 };
 let someObj = Guy();
 let GuysFriend {
-    use Guy;
-    public tellSecret() {
-        console.log(shared_secret);
-    };
+ use Guy;
+ public tellSecret() {
+  console.log(shared_secret);
+ };
 };
 let friend = GuysFriend();
 friend.tellSecret();
