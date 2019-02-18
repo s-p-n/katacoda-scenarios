@@ -30,7 +30,6 @@ console.log(baz);
 <pre class="file" data-filename="project/program.ari" data-target="replace">
 let a = 543;
 let b = 1.25;
-
 console.log(a + b);
 </pre>
 `arini program.ari`{{execute}}
@@ -43,10 +42,56 @@ let foo = [
 ];
 console.log(foo["question"]); // "What is the..."
 console.log(foo.answer); // 42 
-
+</pre>
+<pre class="file" data-filename="project/program.ari" data-target="replace">
 let bar = ["cow", "pig", "sheep"];
 bar.forEach(#(val) {
 	console.log(val);
 });
 </pre>
 `arini program.ari`{{execute}}
+
+* A **tag** is basically an XML tag- kinda like HTML. A Tag has a name and may contain attributes or children. Unlike XML/HTML, Tag children in Arini can be of any type or expression. Because of the first-class nature of Tag children, **each child of a Tag must be followed by a semi-colon**- just like everywhere else in the language. 
+<pre class="file" data-filename="project/program.ari" data-target="replace">
+let someVariable = "I'm some variable";
+let someSwitch = true;
+let myComponent = <someTag with="attributes">
+    "I am some inner text.";
+    <nestedTag>
+        "This is a nested string in a nested tag.";
+        someVariable;
+        if (someSwitch) {
+            return <switch on=true />;
+        } else {
+            return <switch on=false />;
+        };
+    </nestedTag>;
+</someTag>;
+console.log(myComponent.nestedTag.switch.on); 
+</pre>
+`arini program.ari`{{execute}}
+
+* A **scope** is kind of like a function from other languages, but has support for `public` and `protected` properties. If nothing is returned, a scope does not return `void` when invoked, it instead **returns the public properties available.** When extended, the public and protected properties are made available to the scope that extends it. `private` can be thought of as a synonym for `let`, but there are subtle differences. In essence, `private` and `let` are stored exactly the same way, just in slightly different places. They both work anywhere in the language exactly the same way- so I suggest to pick one and stick with it.
+<pre class="file" data-filename="project/program.ari" data-target="replace">
+let Guy {
+	protected shared_secret = "it's a foo!";
+	public sayHi (name = "no name") {
+		return "Hello, " + name;
+	};
+};
+let someObj = Guy();
+/*
+someObj becomes an array with the method: sayHi(name)
+*/
+let GuysFriend {
+	use Guy;
+	public tellSecret() {
+		console.log(shared_secret);
+	};
+};
+let friend = GuysFriend();
+friend.tellSecret(); // "It's a foo!"
+</pre>
+`arini program.ari`{{execute}}
+
+# Now try experimenting :)
